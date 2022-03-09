@@ -23,6 +23,9 @@
  .fa-plus {
      float: right
  }
+ .fa-trash {
+     float: right
+ }
 
  li {
      background: #fff;
