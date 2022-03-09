@@ -1,85 +1,74 @@
- body {
-     font-family: Roboto;
-     background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%)
+.container {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
  }
-
- ul {
-     list-style: none;
-     margin: 0;
-     padding: 0
+ 
+ form {
+   background: #ebe6e6;
+   border-radius: 5px;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 30px;
+   width: 100%;
  }
-
- h1 {
-     background: #2980b9;
-     color: white;
-     margin: 0;
-     padding: 10px 20px;
-     text-transform: uppercase;
-     font-size: 24px;
-     font-weight: normal
+ 
+ form input[type="text"] {
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+   width: 77%;
+   outline: none;
+ }
+ 
+ form input[type="date"] {
+   border: none;
+   padding: 8px;
+   border-radius: 5px;
+   width: 10%;
+   outline: none;
+ }
+ 
+ form input[type="submit"] {
+   border: none;
+   padding: 10px 25px;
+   background: #e90c0c;
+   color: wheat;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
  }
  
  
- .fa-plus {
-     float: right
+ .taskes {
+   width: 100%;
+   background: #ebe6e6;
+   min-height: 64px;
+   margin-top: 30px;
+   border-radius: 5px;
+   padding: 20px;
  }
- .fa-trash {
-     float: right
+ .task {
+   padding: 10px;
+   border-radius: 5px;
+   background: white;
+   margin-bottom: 10px;
+   text-align: left;
+   color: #333;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
  }
-
- li {
-     background: #fff;
-     height: 40px;
-     line-height: 30px;
-     color: #666
- }
-
- li:nth-child(2n) {
-     background: #f7f7f7
- }
-
- span {
-     background: #e74c3c;
-     height: 40px;
-     margin-right: 20px;
-     text-align: center;
-     color: white;
-     width: 0;
-     display: inline-block;
-     transition: 0.2s linear;
-     opacity: 0
- }
-
- li:hover span {
-     width: 40px;
-     opacity: 1.0
- }
-
- input {
-     font-size: 15px;
-     color: #2980b9;
-     background-color: #f7f7f7;
-     width: 100%;
-     padding: 7px 10px 10px 20px;
-     box-sizing: border-box;
-     border: 0px solid rgba(0, 0, 0, 0)
- }
-
- input:focus {
-     background: #fff;
-     border: 3px solid #2980b9;
-     padding: 13px 13px 13px 20px;
-     outline: none
- }
-
- #container {
-     width: 360px;
-     margin: 100px auto;
-     background: #f7f7f7;
-     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
- }
-
- .completed {
-     color: gray;
-     text-decoration: line-through
+ 
+ .task .btn {
+   border: none;
+   padding: 5px 20px;
+   background: #e90c0c;
+   color: wheat;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
  }

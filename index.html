@@ -9,18 +9,15 @@
   <script src="https://sawyer020.github.io/todolist.js" type="text/JavaScript"></script>
   
 <body>
-<div id="container">
-    <h1>To-Do List 
-    <i class="fa fa-plus "></i>
-    <input type="text" placeholder="Add New Todo">
-    <input type='date'>
-    </h1>
-    <ul>
-        <li><span><i class="fa fa-trash"></i></span> Go To Maths Class</li>
-        <li><span><i class="fa fa-trash"></i></span> Buy New Clothes</li>
-        <li><span><i class="fa fa-trash"></i></span> Visit George</li>
-    </ul>
-</div>
+  <div class="container">
+    <form action="post">
+      <input type="text" autofocus placeholder="Add Task"> 
+      <input type="date">
+      <input type="submit" value="Add Task">
+      
+    </form>
+    <div class="taskes"></div>
+  </div>
 </body>
   
 </html>

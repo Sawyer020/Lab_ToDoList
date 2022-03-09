@@ -1,30 +1,44 @@
-$(document).ready(function(){
+let textInput = document.querySelector(`form input[type="text"]`);
+let timeInput = document.querySelector(`form input[type="date"]`);
+let submitBtn = document.querySelector(`form input[type="submit"]`);
+let taskesDiv = document.querySelector(".taskes");
 
-$("ul").on("click", "li", function(){
-$(this).toggleClass("completed");
-});
-
-
-$("ul").on("click", "span", function(event){
-$(this).parent().fadeOut(500,function(){
-$(this).remove();
-});
-event.stopPropagation();
-});
-
-var dateControl = document.querySelector('input[type="date"]');
-//get date from HTML
-
-$("input[type='text']").keypress(function(event){
-if(event.which === 13){
-
-var todoText = $(this).val()
-$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "\n" + dateControl.value + "</li>")
+function createTheElement() {
+    let ele = `
+        <div class="task">
+            ${textInput.value}
+            <li><span>${timeInput.value}</span></li>
+            <buttom class="btn">Delete</buttom>
+        </div>
+    `
+    return ele
 }
+
+
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    // console.log(textInput.value);
+
+    if (textInput.value !== "") {
+        taskesDiv.innerHTML += createTheElement();
+    }
+
+    textInput.value = "";
+    textInput.focus();
+
+    removeBtn();
+
+    // theStorage();
 });
 
-$(".fa-plus").click(function(){
-$("input[type='text']").fadeToggle();
-});
+function removeBtn() {
+    let btn = document.querySelectorAll(".btn");
 
-});
+    btn.forEach((buttom) => {
+        buttom.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.target.parentElement.remove();
+        });
+    });
+};
